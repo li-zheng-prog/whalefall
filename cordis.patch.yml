@@ -1,0 +1,5 @@
+# whalefall bundle layer（DSH 0.2.x）
+# 把极光/鲸影背景动效插件作为一条普通 Loader 行插入当前 profile。
+- insert:
+    - id: whalefall
+      name: 'whalefall'
