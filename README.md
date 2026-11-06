@@ -7,6 +7,16 @@ DeepSeek Harness 的背景主题插件：以极光、粒子鲸和玻璃拟态界
 - 侧栏、输入框及部分内容面板采用半透明玻璃效果。
 - 尊重系统的减少动态效果设置。
 
+## 预览
+
+### 深色主题
+
+![Whalefall 深色主题预览](assets/dark.png)
+
+### 浅色主题
+
+![Whalefall 浅色主题预览](assets/light.png)
+
 ## 安装
 
 适用于 DeepSeek Harness 0.2.x。克隆仓库后，在仓库目录中运行：
