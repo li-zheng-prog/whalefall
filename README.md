@@ -1,26 +1,26 @@
-# Whalefall · 鲸落
+# Whalefall
 
-DeepSeek Harness 的背景主题插件：以极光、粒子鲸和玻璃拟态界面，为工作区增添动态背景。
+An aurora and whale glassmorphism background theme for the DeepSeek Harness web UI.
 
-- 跟随 DeepSeek Harness 的浅色和深色主题切换。
-- 极光、粒子鲸和星点网格随界面呈现动态效果。
-- 侧栏、输入框及部分内容面板采用半透明玻璃效果，左侧栏卡片为高斯模糊磨砂玻璃，右侧栏为透明玻璃。
-- 提示（tooltip）与会话 / 工作区信息悬浮卡换成跟随主题的玻璃浮层，浅色主题下不再出现深色板块。
-- 尊重系统的减少动态效果设置。
+- Follows DeepSeek Harness's light and dark themes.
+- Aurora, particle whale and star-grid effects animate with the interface.
+- The sidebar, composer and some content panels use translucent glass: the left sidebar is a frosted-glass card, the right sidebar is clear glass.
+- Tooltips and session / workspace hover cards are themed glass layers, so they no longer show up as dark slabs in the light theme.
+- Respects the system reduce-motion setting.
 
-## 预览
+## Preview
 
-### 深色主题
+### Dark theme
 
-![Whalefall 深色主题预览](assets/dark.png)
+![Whalefall dark theme preview](assets/dark.png)
 
-### 浅色主题
+### Light theme
 
-![Whalefall 浅色主题预览](assets/light.png)
+![Whalefall light theme preview](assets/light.png)
 
-## 安装
+## Installation
 
-适用于 DeepSeek Harness 0.2.x。克隆仓库后，在仓库目录中运行：
+Designed for DeepSeek Harness 0.2.x. Clone the repository and run the following from its root:
 
 ```powershell
 git clone https://github.com/li-zheng-prog/whalefall.git
@@ -28,12 +28,12 @@ cd whalefall
 dsh plugin --profile desktop add .
 ```
 
-也可以通过 DeepSeek Harness 的插件管理器安装此目录。安装后如未立即生效，请重新加载或重启 DeepSeek Harness。
+You can also install this directory through the DeepSeek Harness plugin manager. If the theme does not take effect immediately, reload or restart DeepSeek Harness.
 
-## 注意事项
+## Notes
 
-主题依赖 DeepSeek Harness 的界面结构，升级后部分样式可能需要适配。粒子鲸和部分极光效果需要 WebGL 2 支持。
+The theme depends on DeepSeek Harness's UI structure, so some styles may need adjustment after an upgrade. The particle whale and some aurora effects require WebGL 2.
 
-## 许可证
+## License
 
 [MIT](LICENSE)
