@@ -4,9 +4,10 @@ An aurora and whale glassmorphism background theme for the DeepSeek Harness web 
 
 - Follows DeepSeek Harness's light and dark themes.
 - Aurora, particle whale and star-grid effects animate with the interface.
-- On the home screen the particle whale steps aside while the official home whale plays its dive animation, then reassembles once the official whale has finished.
+- On the home screen the particle whale steps aside on the same blank-space click that starts the official home whale's dive animation, so it is gone before the official whale's first frame, then reassembles once the official whale has finished.
 - The sidebar, composer and some content panels use translucent glass: the left sidebar is a frosted-glass card, the right sidebar is clear glass.
 - Tooltips and session / workspace hover cards are themed glass layers, so they no longer show up as dark slabs in the light theme.
+- Dropdown menus (the command menu, the model menu and other menu surfaces) use the same frosted glass: a neutral, semi-transparent fill with a real backdrop blur, a diagonal sheen and a 1px inner edge.
 - Respects the system reduce-motion setting.
 
 ## Preview
@@ -35,7 +36,7 @@ You can also install this directory through the DeepSeek Harness plugin manager.
 
 The theme depends on DeepSeek Harness's UI structure, so some styles may need adjustment after an upgrade. The particle whale and some aurora effects require WebGL 2.
 
-The home hand-off watches the official home whale canvas, so it needs no fixed animation length. If that canvas is missing or unreadable, the particle whale simply stays visible as before.
+The home hand-off starts on the blank-space click that starts the official animation, then watches the official home whale canvas for playback and its end, so it needs no fixed animation length. If that canvas is missing or unreadable, the particle whale simply stays visible as before.
 
 ## License
 
