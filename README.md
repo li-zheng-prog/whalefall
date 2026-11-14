@@ -8,7 +8,7 @@ An aurora and whale glassmorphism background theme for the DeepSeek Harness web 
 - The sidebar, composer and some content panels use translucent glass: the left sidebar is a frosted-glass card, the right sidebar is clear glass.
 - Tooltips and session / workspace hover cards are themed glass layers, so they no longer show up as dark slabs in the light theme.
 - Dropdown menus (the command menu, the model menu and other menu surfaces) use the same frosted glass: a neutral, semi-transparent fill with a real backdrop blur, a diagonal sheen and a 1px inner edge.
-- Respects the system reduce-motion setting.
+- Respects the system reduce-motion setting, including changes while the page is open.
 
 ## Preview
 
@@ -34,7 +34,13 @@ You can also install this directory through the DeepSeek Harness plugin manager.
 
 ## Notes
 
+The `nowhale` query parameter disables the particle whale when present (for example, `?nowhale` or `?nowhale=1`); its value is ignored. Other parameter values containing that word do not disable it.
+
 The theme depends on DeepSeek Harness's UI structure, so some styles may need adjustment after an upgrade. The particle whale and some aurora effects require WebGL 2.
+
+Both WebGL effects request a high-performance graphics device. This is a preference, not a guarantee: the browser/Electron host, OS graphics settings and driver determine the actual GPU. The theme cannot select a GPU for the host's other rendering or desktop composition. Restart the host after updating so its graphics contexts are recreated.
+
+To bound background rendering cost on large or high-DPI displays, the dark aurora renders at up to 518,400 pixels and 24 fps; the light aurora updates at up to 20 fps. Other display canvases are capped at 921,600 pixels each and are scaled to fill the window. The whale remains capped at 30 fps. Unused multisampling/depth/stencil buffers are disabled, and the mouse-flow pass is skipped when interaction is disabled. Hidden pages stop drawing; lost WebGL contexts are rebuilt after restoration. These limits reduce rendering work, but do not prescribe a GPU-utilization percentage.
 
 The home hand-off starts on the blank-space click that starts the official animation, then watches the official home whale canvas for playback and its end, so it needs no fixed animation length. The dissolve is driven by a per-particle drift field: a short, shape-preserving outward swell followed by a random scatter, with the particles fading as they travel, so the whale disperses instead of collapsing into a dot. `window.__dshWhaleTune.spread` scales the scatter distance for tuning. If that canvas is missing or unreadable, the particle whale simply stays visible as before.
 
